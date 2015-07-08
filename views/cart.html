@@ -1,0 +1,36 @@
+<div class='nav'>
+  <ul class="nav-bar">
+    <li><a class="navLink" href="#/" id="home">Home</a></li>
+    <li><a class="navLink" href="#/" id="home">About</a></li>
+    <li><a class="navLink" href="#/myCart" id="home">View Cart</a></li>
+    <li><a class="navLink" href="#/" id="home">Contact</a></li>
+  </ul>
+</div>
+
+<div class="header">
+<h1>Find</h1>
+
+</div>
+
+<div class="visibility" ng-controller="CartController">
+  <div class="listings">
+    <div class="total">Total Items: {{items.length}}</div>
+    <article class="mainPageArticles" ng-repeat="item in items | filter: search:strict" data-id="{{item.id}}">
+      <div class="contain">
+        <div class="leftSide">
+      <a class="listTitle" href="#/detail/{{item.id}}"><h3 class="title">{{item.title}}</h3></a>
+      <h5>${{item.price}} {{item.currency}}</h5><br>
+      <button><a class="listingLinks" href="{{item.url}}">View on Etsy</a></button>
+      <button><a class="listingLinks" href="#/myCart" ng-click="deleteItem(item._id)">Delete Item</a></button>
+    </div>
+    <div class="rightSide">
+      <a href="#/detail/{{item.id}}"><img class="listingImg" ng-src="{{item.imgUrl.url_170x135}}" alt="" /></a>
+    </div>
+    </div>
+    </article>
+
+
+
+
+  </div>
+</div>

@@ -1,0 +1,145 @@
+body {
+  font-family: 'Lato';
+  background: url('https://static.pexels.com/photos/3112/art-brush-painting-colors-large.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+.header {
+  color: #1A5D65;
+  text-align: center;
+  font-family: 'Lobster', cursive;
+  font-size: 2.5em;
+  letter-spacing: 7px;
+
+}
+
+.nav {
+  text-align: right;
+
+}
+
+.nav-bar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+
+}
+
+li {
+display: inline-block;
+}
+
+
+.navLink:link, .navLink:visited {
+    display: block;
+    width: 120px;
+    font-weight: bold;
+    color: #3C8E77;
+
+    text-align: center;
+    padding: 4px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.navLink:hover, .navLink:active {
+    background-color: #1D2E4C;
+}
+
+
+.visibility {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: grey;
+    z-index:0;
+    opacity:0.9;
+    color: white;
+    width: 60%;
+
+
+}
+
+.contain {
+  display: inline-block;
+  width: 100%;
+}
+
+.leftSide {
+  display: inline-block;
+  width: 60%;
+  vertical-align: top;
+  padding: 10px;
+
+}
+
+.rightSide {
+  display: inline-block;
+  width: 30%;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-left: 0;
+  float: right;
+
+}
+h3 {
+  vertical-align: top;
+}
+
+.listingImg {
+  float: right;
+  height: 200px;
+}
+
+
+.mainPageArticles {
+  border-bottom: 1px solid #1D2E4C;
+
+}
+
+.listingLinks {
+  text-decoration: none;
+  color: #3C8E77;
+  font-size: 1.2em;
+
+}
+
+.containDetail {
+  text-align: center;
+}
+
+.title {
+  font-weight: 100;
+}
+
+.listTitle {
+  text-decoration: none;
+  color: white;
+}
+
+input {
+  display: inline-block;
+
+}
+
+.search {
+  display: inline-block;
+  color: #1D2E4C;
+
+}
+
+.containSearch {
+  text-align: left;
+  font-family: Lato;
+  font-size: 16px;
+
+}
+form {
+  display: inline-block;
+}

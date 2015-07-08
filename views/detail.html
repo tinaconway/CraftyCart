@@ -1,0 +1,27 @@
+<div class='nav'>
+  <ul class="nav-bar">
+    <li><a class="navLink" href="#/" id="home">Home</a></li>
+    <li><a class="navLink" href="#/" id="home">About</a></li>
+    <li><a class="navLink" href="#/" id="home">View Cart</a></li>
+    <li><a class="navLink" href="#/" id="home">Contact</a></li>
+  </ul>
+</div>
+
+<div class="header" ng-controller="MainController">
+<h1>Find</h1>
+</div>
+
+<div class="visibility">
+  <div class="containDetail">
+    <article class="">
+      <img class="detailImg" ng-src="{{listing.imgUrl.url_570xN}}" alt="" />
+      <h2 class="title">{{listing.title}}</h2>
+      <h4>${{listing.price}} {{listing.currency}}</h4><br>
+      <div class=contain-description>
+      <span>{{listing.description}}</span>
+      </div>
+
+  </div>
+    </article>
+  </div>
+</div>

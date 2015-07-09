@@ -1,62 +1,20 @@
-<div class='nav'>
-  <ul class="nav-bar">
-    <li><a class="navLink" href="#/" id="home">Home</a></li>
-    <li><a class="navLink" href="#/" id="home">About</a></li>
-    <li><a class="navLink" href="#/myCart" id="home">View Cart</a></li>
-    <li><a class="navLink" href="#/" id="home">Contact</a></li>
-  </ul>
-</div>
 
 <div class="header">
-  <div class="containSearch"><p class="search">Keyword:</p><form ng-submit="newKeyword(keyword)"><input type="text" ng-model="keyword.val" name="name" val="" placeholder="Enter a keyword" size="40"></form></div>
-  <div class="containSearch"><p class="search">Search:</p><input type="text" ng-model="search.title" name="name" val="" placeholder="Search within current document" size="40"></div>
 <h1>Crafty Cart</h1>
 </div>
 
-<div class="visibility" ng-controller="MainController">
-  <div class="listings">
-    <article class="mainPageArticles" ng-repeat="listing in listings | filter: search:strict" data-id="{{listing.id}}">
-      <div class="contain">
-        <div class="leftSide">
-      <a class="listTitle" href="#/detail/{{listing.id}}"><h3 class="title">{{listing.title}}</h3></a>
-      <h5>${{listing.price}} {{listing.currency}}</h5><br>
-      <button><a class="listingLinks" href="{{listing.url}}">View on Etsy</a></button>
-      <div ng-controller="CartController">
-      <button><a class="listingLinks" href="" ng-click="addToCart(listing)">Add to Cart</a></button>
-    </div>
-    </div>
-    <div class="rightSide">
-      <a href="#/detail/{{listing.id}}"><img class="listingImg" ng-src="{{listing.imgUrl.url_170x135}}" alt="" /></a>
-    </div>
-    </div>
-    </article>
 
-
-
-
-  </div>
+<div class="visibilityMain">
+  <div class="containMain">
+  <h1>Welcome to Crafty Cart!</h1>
 </div>
+  <article class="about">We are a full service marketplace that connects you with a catalog of
+  unique goods from around the world! To get started, just click on our 'Listings'
+  link at the top of the page. From there, you can search by keyword to find
+  exactly what you're looking for! Interested in buying an item? Just click 'Add to Cart'
+   and it will be added to your personal cart. Happy Shopping!</article>
+  <cite>- The Crafty Cart Team</cite>
 
 
 
-<!-- <div ng-include="'views/nav.html'"></div>
-
-<div class="container">
-  <div class="photos">
-    <article class="photo" ng-repeat="photo in photos" data-id="{{photo.id}}">
-      <header>
-        <img src="http://www.fillmurray.com/50/50" alt="" />
-        <div class="">
-          <a href="#/detail/{{photo.id}}">{{photo.title}}</a>
-        </div>
-        <a href="#">{{photo.dt}}</a>
-      </header>
-      <div class="pContain">
-          <img ng-src="{{photo.image}}" alt="" />
-          <div class="like" ng-controller="LikesController">
-          <span ng-click="addLike(photo)">&#9825;</span>
-          </div>
-      </div>
-    </article>
-  </div>
-</div> -->
+</div>

@@ -2,23 +2,17 @@
   'use strict';
 
   angular
-    .module('find', [
+    .module('main', [
       'ngRoute',
       'underscore',
-      'moment'
+      'moment',
+      'find',
+      'cart'
     ])
     .config(function ($routeProvider) {
       $routeProvider
         .when('/', {
           templateUrl: 'views/main.html',
-          controller: 'MainController'
-        })
-        .when('/myCart', {
-          templateUrl: 'views/cart.html',
-          controller: 'CartController'
-        })
-        .when('/detail/:listingId', {
-          templateUrl: 'views/detail.html',
           controller: 'MainController'
         })
         .when('/404', {

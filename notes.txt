@@ -1,0 +1,44 @@
+New Folder - photos
+photo/photos.module.js
+photo/photos.controller.js
+photo/photos.service.js
+  New Folder - views
+  photos/views/detial.html
+  photos/views/list.html
+New Folder - likes
+likes/likes.module.js
+likes/likes.controller.js
+likes/likes.service.js
+  New Folder - views
+  likes/views/list.html
+  likes/views/detail.html
+
+
+//made 2 modules: photos and likes
+
+PHOTOS MODULE
+photos.module.js
+(function() {
+  'use strict;'
+  angular
+    .module('photos', [
+      'ngRoute'
+      ])
+      .config(function($routeProvider) {
+        $routeProvider
+          .when('/photos', {
+            templateUrl: 'photos/views/list.html',
+            controller: 'PhotoController'
+          })
+          .when('/photos/:photoId', {
+            templateUrl: 'photos/views/detail.html',
+            controller: 'PhotoController'
+          });
+      });
+})();
+
+
+remove detail from app.js
+
+
+controller

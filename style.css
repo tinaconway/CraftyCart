@@ -7,19 +7,16 @@ body {
   background-size: cover;
 }
 
-
 .header {
   color: #1A5D65;
   text-align: center;
   font-family: 'Lobster', cursive;
   font-size: 2.5em;
   letter-spacing: 7px;
-
 }
 
 .nav {
   text-align: right;
-
 }
 
 .nav-bar {
@@ -27,7 +24,6 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
-
 }
 
 li {

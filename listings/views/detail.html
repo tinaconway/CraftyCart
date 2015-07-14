@@ -1,31 +1,11 @@
 
-<div class="header" ng-controller="ListingController">
+<div class="header">
 <h1>Crafty Cart</h1>
 </div>
 
 <div class="visibility">
   <div class="containDetail">
-    <article class="">
-      <img class="detailImg" ng-src="{{listing.img.url_570xN}}" alt="" />
-      <h2 class="title">{{listing.title}}</h2>
-      <h4>${{listing.price}} {{listing.currency}}</h4><br>
-      <div class=contain-description>
-      <span>{{listing.description}}</span>
-      <script type="text/javascript">
-      if (listing.materials) {
-        console.log(listing.materials);
-        listing.moment.forEach(function(el) {
-          var div = document.getElementById('materials');
-          div.innerHTML += el;
-        });
-      }
-      </script>
-      <div id="materials">
-
-      </div>
-      </div>
-
-  </div>
-    </article>
+    <single-list-directive listing="listingCtrl.listing">
+    </single-list-directive>
   </div>
 </div>

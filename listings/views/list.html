@@ -1,29 +1,13 @@
-
 <div class="header">
   <div class="containSearch"><p class="search">Keyword:</p><form ng-submit="newKeyword(keyword)"><input type="text" ng-model="keyword.val" name="name" val="" placeholder="Enter a keyword" size="40"></form></div>
   <div class="containSearch"><p class="search">Search:</p><input type="text" ng-model="search.title" name="name" val="" placeholder="Search within current document" size="40"></div>
 <h1>Crafty Cart</h1>
 </div>
 
-<div class="visibility" ng-controller="ListingController">
+<div class="visibility">
   <div class="listings">
-    <h3></h3>
-    <article class="mainPageArticles" ng-repeat="listing in listings | filter: search:strict" data-id="{{listing.id}}">
-      <div class="contain">
-        <div class="leftSide">
-      <a class="listTitle" href="#/listing/{{listing.id}}"><h3 class="title">{{listing.title}}</h3></a>
-      <h5>${{listing.price}} {{listing.currency}}</h5><br>
-      <button><a class="listingLinks" href="{{listing.url}}">View on Etsy</a></button>
-      <div ng-controller="CartController">
-      <button><a class="listingLinks" href="" ng-click="addToCart(listing)">Add to Cart</a></button>
-    </div>
-    </div>
-    <div class="rightSide">
-      <a href="#/listing/{{listing.id}}"><img class="listingImg" ng-src="{{listing.img.url_170x135}}" alt="" /></a>
-    </div>
-    </div>
-    </article>
-
+    <list-directive ng-repeat="listing in listingCtrl.listings | filter: search:strict" listing="listing" data-id="{{listing.id}}" action="addToCart(listing)">
+    </list-directive>
 
   </div>
 </div>

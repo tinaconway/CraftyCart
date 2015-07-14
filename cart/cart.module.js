@@ -8,7 +8,8 @@
       $routeProvider
       .when('/myCart', {
         templateUrl: 'cart/views/list.html',
-        controller: 'CartController'
+        controller: 'CartController',
+        conrollerAs: 'cartCtrl'
       });
     });
 

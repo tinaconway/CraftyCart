@@ -4,26 +4,32 @@ var keyVal;
 
   angular
     .module('find')
-    .controller('ListingController', function ($scope, $routeParams, FindService, $rootScope, $location, $q, $cacheFactory) {
+    .controller('ListingController', function ($scope, $routeParams, FindService, $rootScope, $location, $q, $cacheFactory, CartService) {
+      var vm = this;
       FindService.getListings().then(function(listings) {
-        $scope.listings = listings;
+        vm.listings = listings;
       });
       if($routeParams.listingId) {
         FindService.getSingleListing($routeParams.listingId).then(function(listing) {
-        $scope.listing = listing;
+
+        vm.listing = listing;
         });
-      }
+      };
+      $scope.addToCart = function (listing) {
+       CartService.addToCart(listing);
+     };
       $scope.newKeyword = function(keyword) {
+        console.log('i am in new keyword');
         keyVal = keyword.val;
         FindService.newKeyword(keyword).then(function(listings) {
-        $scope.listings = listings;
+        vm.listings = listings;
       }).then(function () {
             $rootScope.$broadcast('listings:updated');
           })
       };
       var watchCallback = function () {
        FindService.displayNewListings(keyVal).then(function (listings) {
-         $scope.listings = listings
+         vm.listings = listings
          $scope.keyword = null;
        });
       };

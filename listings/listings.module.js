@@ -8,11 +8,13 @@
       $routeProvider
         .when('/listings', {
           templateUrl: 'listings/views/list.html',
-          controller: 'ListingController'
+          controller: 'ListingController',
+          controllerAs: 'listingCtrl'
         })
         .when('/listing/:listingId', {
           templateUrl: 'listings/views/detail.html',
-          controller: 'ListingController'
+          controller: 'ListingController',
+          controllerAs: 'listingCtrl'
         });
     });
 })();

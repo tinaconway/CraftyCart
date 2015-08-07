@@ -163,3 +163,60 @@ margin-bottom: 20px;
 form {
   display: inline-block;
 }
+@media all and (max-width: 1123px) {
+  .visibility {
+    width: 70%;
+  }
+}
+
+@media all and (max-width: 963px) {
+  .visibility {
+    width: 80%;
+  }
+}
+
+@media all and (max-width: 848px) {
+  .visibility {
+    width: 90%;
+  }
+}
+@media all and (max-width: 900px) {
+  .visibilityMain {
+    width: 70%;
+  }
+}
+@media all and (max-width: 764px) {
+  .visibilityMain {
+    width: 78%;
+  }
+}
+@media all and (max-width: 725px) {
+  .leftSide {
+    width: 48%;
+  }
+}
+
+@media all and (max-width: 585px) {
+  .listingImg {
+    height: 150px;
+  }
+}
+@media all and (max-width: 515px) {
+  .visibilityMain {
+    height: 300px;
+  }
+}
+@media all and (max-width: 490px) {
+  .leftSide {
+    width: 38%;
+  }
+
+}
+@media all and (max-width: 430px) {
+  .visibilityMain {
+    height: 350px;
+  }
+.navLink:link, .navLink:visited {
+  width: 100px;
+}
+}

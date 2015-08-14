@@ -33,12 +33,11 @@ display: inline-block;
 
 .navLink:link, .navLink:visited {
     display: block;
-    width: 120px;
     font-weight: bold;
     color: #3C8E77;
-
     text-align: center;
-    padding: 4px;
+    padding: 16px;
+    font-size: 1.2em;
     text-decoration: none;
     text-transform: uppercase;
 }
@@ -69,7 +68,7 @@ display: inline-block;
     opacity:0.9;
     color: white;
     width: 60%;
-    height: 230px;
+
 
 
 }
@@ -163,60 +162,37 @@ margin-bottom: 20px;
 form {
   display: inline-block;
 }
-@media all and (max-width: 1123px) {
-  .visibility {
-    width: 70%;
-  }
-}
 
-@media all and (max-width: 963px) {
+@media all and (max-width: 515px) {
+  .visibilityMain {
+    width: 80%;
+    height: 500px;
+    margin-bottom: 120px;
+  }
   .visibility {
     width: 80%;
   }
-}
+  .nav {
+    text-align: center;
+  }
+  .navLink:link, .navLink:visited {
+  padding: 10px;
+  font-size: 1em;
+  }
+  .rightSide {
+    width: 100%;
+  }
+  .leftSide {
+    width:100%;
+  }
 
-@media all and (max-width: 848px) {
+  .containDetail {
+    text-align: left;
+  }
+  .detailImg {
+    width: 100%;
+  }
   .visibility {
-    width: 90%;
+    margin-bottom: 50px;
   }
-}
-@media all and (max-width: 900px) {
-  .visibilityMain {
-    width: 70%;
-  }
-}
-@media all and (max-width: 764px) {
-  .visibilityMain {
-    width: 78%;
-  }
-}
-@media all and (max-width: 725px) {
-  .leftSide {
-    width: 48%;
-  }
-}
-
-@media all and (max-width: 585px) {
-  .listingImg {
-    height: 150px;
-  }
-}
-@media all and (max-width: 515px) {
-  .visibilityMain {
-    height: 300px;
-  }
-}
-@media all and (max-width: 490px) {
-  .leftSide {
-    width: 38%;
-  }
-
-}
-@media all and (max-width: 430px) {
-  .visibilityMain {
-    height: 350px;
-  }
-.navLink:link, .navLink:visited {
-  width: 100px;
-}
 }
